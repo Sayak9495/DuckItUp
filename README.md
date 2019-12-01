@@ -9,5 +9,5 @@ Duck Duck Go Extension
 4. You are good to go.
 
 # Features
-1. Search Google button. [Click on it to go directly to google with the same seacrch query]
-2. Movie Ratings and info when searched for a movie.
+1. Search Google button. [Click on it to go directly to google with the same seacrch query] - WORKING
+2. Movie Ratings and info when searched for a movie. - WORKING
