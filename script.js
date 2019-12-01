@@ -17,17 +17,20 @@ function google(){
 // Movie Rating System
 function movie(){
 	var movie_section = document.getElementsByClassName("about-profiles__link module__link js-about-profile-link");
+
 	for (var i=0;i<movie_section.length;i++){
-		if (movie_section[i].title == "IMDb"){
+		if (movie_section[i].title == "IMDb"){		
 			var arr = movie_section[i].href.split("/");
 			imdb_title = arr[arr.length-1];
 			get_details(imdb_title);
+		}
+		else{
+			console.log("Not a Movie");
 		}
 	}
 }
 
 function get_details(title){
-	console.log("get_details");
 	var url = "https://www.omdbapi.com/?i="+title+"&apikey=33e029e2";
 	
 	var request = new XMLHttpRequest();
@@ -37,14 +40,26 @@ function get_details(title){
 
 	request.onload = function() {
 		var data = JSON.parse(request.response);
-		console.log(data);
-		var imdb = data['imdbRating']+"/10";
-		var rotten_tomatoes = data['Ratings'][1]['Value'];
-		var metacritic = data['Metascore']+"/100";
+		var imdb = "NA";
+		var rotten_tomatoes = "NA";
+		var metacritic = "NA";
+		var genre = "NA";
+		var year = "NA";
+		var runtime = "NA";
+
+		try {imdb = data['imdbRating']+"/10";}
+		catch (err){console.log("imdb Error");}
+		try {rotten_tomatoes = data['Ratings'][1]['Value'];}
+		catch (err){console.log("rotten_tomatoes Error");}
+		try {metacritic = (data['Metascore']=="N/A") ? "NA" : data['Metascore']+"/100" ;}
+		catch (err){console.log("metacritic Error");}
 		
-		var genre = data['Genre'];
-		var year = data['Year'];
-		var runtime = data['Runtime'];
+		try {genre = data['Genre'];}
+		catch (err){console.log("Genre Error");}
+		try {year = data['Year'];}
+		catch (err){console.log("Year Error");}
+		try {runtime = data['Runtime'];}
+		catch (err){console.log("Runtime Error");}
 		insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime);
 	}
 }
@@ -63,18 +78,25 @@ function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime){
 	div.setAttribute("style", "width: 290px;font-size:14px;margin-top:10px;");
 	div.setAttribute("align", "center");
 
+	
 	var div1 = document.createElement("div");
-	div1.setAttribute("style", "float: left; width:76px;border-right: 1px solid;");
-	div1.innerHTML = imdb+"<br>IMDb";
+	if (imdb!=="NA"){
+		div1.setAttribute("style", "float: left; width:76px;border-right: 1px solid;");
+		div1.innerHTML = imdb+"<br>IMDb";
+	}
+
 
 	var div2 = document.createElement("div");
-	div2.setAttribute("style", "float: left; width:120px;border-right: 1px solid;");
-	div2.innerHTML = rotten_tomatoes+"<br>Rotten Tomatoes";
+	if (rotten_tomatoes!=="NA"){
+		div2.setAttribute("style", "float: left; width:120px;border-right: 1px solid;");
+		div2.innerHTML = rotten_tomatoes+"<br>Rotten Tomatoes";
+	}
 
 	var div3 = document.createElement("div");
-	div3.setAttribute("style", "float: left; width:76px;");
-	div3.innerHTML = metacritic+"<br>Metacritic";
-
+	if (metacritic!=="NA"){
+		div3.setAttribute("style", "float: left; width:76px;");
+		div3.innerHTML = metacritic+"<br>Metacritic";
+	}
 
 	var br = document.createElement("br")
 	br.setAttribute("style", "clear: left");

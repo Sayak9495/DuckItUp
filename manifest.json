@@ -15,7 +15,7 @@
           "https://duckduckgo.com/*"
         ],
         "js": ["script.js"],
-        "run_at": "document_end"         
+        "run_at": "document_idle"
       }
     ],
     "permissions": ["activeTab"]
