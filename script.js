@@ -1,5 +1,4 @@
-// Search Google Button
-
+// Insert Search Google Button
 function google(){
 	var search = document.getElementsByClassName("search__input--adv js-search-input")[0].value;
 	var node = document.createElement("div");
@@ -19,7 +18,7 @@ function movie(){
 	var movie_section = document.getElementsByClassName("about-profiles__link module__link js-about-profile-link");
 
 	for (var i=0;i<movie_section.length;i++){
-		if (movie_section[i].title == "IMDb"){		
+		if (movie_section[i].title == "IMDb"){	
 			var arr = movie_section[i].href.split("/");
 			imdb_title = arr[arr.length-1];
 			get_details(imdb_title);
@@ -30,11 +29,11 @@ function movie(){
 	}
 }
 
+//Get Movie/Series details from api
 function get_details(title){
 	var url = "https://www.omdbapi.com/?i="+title+"&apikey=33e029e2";
 	
 	var request = new XMLHttpRequest();
-
 	request.open('GET', url);
 	request.send();
 
@@ -56,7 +55,7 @@ function get_details(title){
 		
 		try {genre = data['Genre'];}
 		catch (err){console.log("Genre Error");}
-		try {year = data['Year'];}
+		try {year = data['Year'][4]=="–" ? data['Year']+"Present" : data['Year'];}
 		catch (err){console.log("Year Error");}
 		try {runtime = data['Runtime'];}
 		catch (err){console.log("Runtime Error");}
@@ -64,6 +63,7 @@ function get_details(title){
 	}
 }
 
+//Insert Movie/Series detials into DOM
 function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime){
 	genre = genre.split(",");
 
@@ -81,14 +81,24 @@ function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime){
 	
 	var div1 = document.createElement("div");
 	if (imdb!=="NA"){
-		div1.setAttribute("style", "float: left; width:76px;border-right: 1px solid;");
+		if(rotten_tomatoes!=="NA"){
+			div1.setAttribute("style", "float: left; width:76px;border-right: 1px solid;");
+		}
+		else{
+			div1.setAttribute("style", "float: left; width:76px;");
+		}
 		div1.innerHTML = imdb+"<br>IMDb";
 	}
 
 
 	var div2 = document.createElement("div");
 	if (rotten_tomatoes!=="NA"){
-		div2.setAttribute("style", "float: left; width:120px;border-right: 1px solid;");
+		if (metacritic!=="NA"){
+			div2.setAttribute("style", "float: left; width:120px;border-right: 1px solid;");
+		}
+		else{
+			div2.setAttribute("style", "float: left; width:120px;");
+		}
 		div2.innerHTML = rotten_tomatoes+"<br>Rotten Tomatoes";
 	}
 
