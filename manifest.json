@@ -1,9 +1,13 @@
 {
-
   "manifest_version": 2,
-  "name": "DuckItUp",
-  "description": "DuckDuckGo Extension",
-  "version": "0.1",
+  "developer": {
+    "name": "Sayak Sen",
+    "url": "https://sayak9495.github.io/"
+  },
+  "name": "DuckDuckGo Enhancer",
+  "description": "DuckItUp integrates search google button and movie rating system. Open-Source",
+  "short_name": "DuckItUp",
+  "version": "1.0",
   "icons": {"128": "icon_128.png"},
   "browser_action":{
     "default_icon": "icon.png"

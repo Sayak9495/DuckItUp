@@ -55,7 +55,7 @@ function get_details(title){
 		
 		try {genre = data['Genre'];}
 		catch (err){console.log("Genre Error");}
-		try {year = data['Year'][4]=="–" ? data['Year']+"Present" : data['Year'];}
+		try {year = (typeof data['Year'][6] == 'undefined' && data['Year'][4]=='-') ? data['Year']+"Present" : data['Year'];}
 		catch (err){console.log("Year Error");}
 		try {runtime = data['Runtime'];}
 		catch (err){console.log("Runtime Error");}
