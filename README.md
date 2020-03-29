@@ -1,6 +1,6 @@
 # DuckItUp
 Duck Duck Go Extension
-
+[Download the extension from Chrome-WebStore](https://chrome.google.com/webstore/detail/duckduckgo-enhancer/jmmkhgopncnabnhkedjfbeappnhfecej)
 # How to use?
 1. Clone the repo or download and unzip the repo.
 2. Go to Chrome://extensions
