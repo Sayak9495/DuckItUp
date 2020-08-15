@@ -1,13 +1,10 @@
 {
   "manifest_version": 2,
-  "developer": {
-    "name": "Sayak Sen",
-    "url": "https://sayak9495.github.io/"
-  },
   "name": "DuckDuckGo Enhancer",
+  "version": "1.2",
   "description": "DuckItUp integrates search google button and movie rating system. Open-Source",
   "short_name": "DuckItUp",
-  "version": "1.1",
+  "author": "Sayak Sen",
   "icons": {"128": "icon_128.png"},
   "browser_action":{
     "default_icon": "icon.png"
@@ -16,10 +13,10 @@
       {
         "matches": [
           "https://duckduckgo.com/*",
-	  "https://safe.duckduckgo.com/*"
+	        "https://safe.duckduckgo.com/*"
         ],
-        "js": ["script.js"],
-        "run_at": "document_idle"
+        "run_at": "document_idle",
+        "js": ["script.js"]
       }
     ],
     "permissions": ["activeTab"]

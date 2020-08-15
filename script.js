@@ -15,16 +15,14 @@ function google(){
 
 // Movie Rating System
 function movie(){
-	var movie_section = document.getElementsByClassName("about-profiles__link module__link js-about-profile-link");
+	console.log("Get Movie Ratings...")
 
+	var movie_section = document.getElementsByClassName("about-profiles__link module__link js-about-profile-link");
 	for (var i=0;i<movie_section.length;i++){
 		if (movie_section[i].title == "IMDb"){	
 			var arr = movie_section[i].href.split("/");
 			imdb_title = arr[arr.length-1];
 			get_details(imdb_title);
-		}
-		else{
-			console.log("Not a Movie");
 		}
 	}
 }
@@ -119,6 +117,18 @@ function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime){
 	movie_section[0].appendChild(div);
 }
 
-console.log("DuckItUp Running...")
+// Sleep func for async wait.
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 google();
-movie();
+
+// Wait 2.5 Sec before loading DOM, then inject movie/series ratings.
+// Else chrome waits for the script to get executed completely
+// and then duckduckgo script executes. Even loading at document_end
+// was not working. But this trick, seems to work.
+(async () => {
+	await sleep(2500);
+	movie();
+})();
