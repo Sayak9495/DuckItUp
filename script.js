@@ -42,7 +42,7 @@ function get_details(title, action){
 	if (action=="id"){
 		var url = "https://www.omdbapi.com/?i="+title+"&apikey=33e029e2";
 	} else if (action=="title"){
-		var url = "https://www.omdbapi.com/?t="+title+"&apikey=33e029e2";
+		var url = "https://www.omdbapi.com/?t="+title+"&plot=full&apikey=33e029e2";
 	}
 	var request = new XMLHttpRequest();
 	request.open('GET', url);

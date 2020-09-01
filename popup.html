@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Popup Layout inpired by Traversy Media. -->
+<html>
+  <head>
+    <title>DuckItUp: DuckDuckGo Enhancer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Modal Structure */
+
+      html,
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        margin: 0;
+        min-height: 180px;
+        padding: 0;
+        width: 580px;
+      }
+
+      h1 {
+        font-family: "Menlo", monospace;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        color: #737373;
+      }
+
+      a:link,
+      a:visited {
+        color: #000000;
+        outline: 0;
+        text-decoration: none;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      .modal-header {
+        align-items: center;
+        border-bottom: 0.5px solid #dadada;
+      }
+
+      .modal-content {
+        padding: 0 22px;
+      }
+
+      .modal-icons {
+        border-top: 0.5px solid #dadada;
+        height: 50px;
+        width: 100%;
+      }
+
+      .logo {
+        padding: 16px;
+      }
+
+      .logo-icon {
+        vertical-align: text-bottom;
+        margin-right: 12px;
+      }
+
+      .version {
+        color: #444;
+        font-size: 18px;
+      }
+
+      .flex-container {
+        display: flex;
+        padding: 10px 22px;
+      }
+
+      .flex {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+        width: 60px;
+      }
+
+      .flex:hover {
+        opacity: 0.4;
+      }
+
+      .flex .fa {
+        font-size: 40px;
+        color: #737373;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal-header">
+      <h1 class="logo">
+        <img class="logo-icon" src="icon_128.png" />DuckItUp: A DuckDuckGo Extension
+        <span class="version">(1.3)</span>
+      </h1>
+    </div>
+    <div class="modal-content">
+      <p>DuckItUp is a DuckDuckGo Extension which integrates few productivity features to DuckDuckGo like:</p>
+      <ul>
+        <li> Dedicated Search Google button. [Redirects to google with the same search query]</li>
+        <li>
+           Movie & TV-Series Ratings info gets integrated when searched for a movie. 
+          [like year of release, genre, run-time, IMDb/Rotten-Tomato/Metacritic ratings]
+        </li>
+        <li> Shows Movie/Series Info even when DuckDuckGo doesn't detect the query as a valid movie/series.
+          [Suffix such queries with movie/series and DuckItUp will integrate the movie/series info into the view. Ex- Cosmos series].
+        </li>
+      </ul>
+      <p> If you have any suggestion or additional feature, please write to me at sayak1997sen@gmail.com, review the extension on web-store or raise an issue on Github.</p>
+    </div>
+    <div class="modal-icons">
+      <div class="flex-container">
+        <div class="flex">
+          <a href="https://github.com/Sayak9495/DuckItUp" target="_blank">
+            <i class="fa fa-github" style="color:#737373 "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.sayaksen.in/blog/work_1592152855" target="_blank">
+            <i class="fa fa-globe" style="color:#737373 "></i>
+          </a>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
