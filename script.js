@@ -235,18 +235,7 @@ function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime,title
 	}
 }
 
-// Sleep func for async wait.
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-google();
-
-// Wait 1.5 Sec before loading DOM, then inject movie/series ratings.
-// Else chrome waits for the script to get executed completely
-// and then duckduckgo script executes. Even loading at document_end
-// was not working. But this trick, seems to work.
-(async () => {
-	await sleep(1500);
+window.onload = function() {
+	google();
 	movie();
-})();
+}
