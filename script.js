@@ -1,5 +1,5 @@
 // Insert Search Google Button
-function google(){
+function insertGoogleButtonToDOM(){
 	var search = document.getElementsByClassName("search__input--adv js-search-input")[0].value;
 	var node = document.createElement("div");
 	node.className = "dropdown";
@@ -14,7 +14,7 @@ function google(){
 }
 
 // Movie Rating System
-function movie(){
+function insertMovieInfoToDOM(){
 	console.log("Get Movie Ratings...")
 
 	var movie_section = document.getElementsByClassName("about-profiles__link module__link js-about-profile-link");
@@ -236,6 +236,6 @@ function insert_details(imdb,rotten_tomatoes,metacritic,genre,year,runtime,title
 }
 
 window.onload = function() {
-	google();
-	movie();
+	insertGoogleButtonToDOM();
+	insertMovieInfoToDOM();
 }
