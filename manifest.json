@@ -25,6 +25,7 @@
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "https://www.omdbapi.com/"
   ]
 }
