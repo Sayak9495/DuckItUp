@@ -1,6 +1,8 @@
-<p style="text-align:center; font-size=40px">
-  <a href="https://sponsor.ajay.app"><img src="https://raw.githubusercontent.com/Sayak9495/DuckItUp/master/icon_128.png" alt="Logo" style="height:60px;"></img></a>
+<p align="center">
+ <a href="https://sponsor.ajay.app"><img src="https://raw.githubusercontent.com/Sayak9495/DuckItUp/master/icon_128.png" alt="Logo" style="height:60px;"></img></a>
+  <br/>
 </p>
+
 <h2 align="center" style="font-size:34px">DuckItUp: A DuckDuckGo Enhancer</h2>
 <br>
 <p align="center">
