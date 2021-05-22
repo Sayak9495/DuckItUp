@@ -1,12 +1,12 @@
 <p align="center">
- <a href="https://sponsor.ajay.app"><img src="https://raw.githubusercontent.com/Sayak9495/DuckItUp/master/icon_128.png" alt="Logo" style="height:60px;"></img></a>
+ <a href="https://chrome.google.com/webstore/search/duckitupp"><img src="https://raw.githubusercontent.com/Sayak9495/DuckItUp/master/icon_128.png" alt="Logo" style="height:60px;"></img></a>
   <br/>
 </p>
 
 <h2 align="center" style="font-size:34px">DuckItUp: A DuckDuckGo Enhancer</h2>
 <br>
 <p align="center">
-    <a href="https://chrome.google.com/webstore/detail/duckduckgo-enhancer/jmmkhgopncnabnhkedjfbeappnhfecej"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" alt="Badge"></img></a>
+    <a href="https://chrome.google.com/webstore/detail/duckduckgo-enhancer/jmmkhgopncnabnhkedjfbeappnhfecej"><img src="https://icons.iconarchive.com/icons/carlosjj/google-jfk/128/chrome-web-store-icon.png" alt="Badge"></img></a>
     <a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-enhancer"><img src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png" alt="Badge"></img></a>
 </p>
 <br>
